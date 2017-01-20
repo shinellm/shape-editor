@@ -22,7 +22,7 @@ public class Editor extends JApplet {
   private Command cmd; // the command being executed
   private Drawing dwg; // the drawing: shapes in order
   private ColorIndicator colorBox; // a GUI component to show the current default color
-
+  
   /**
    * Set up the buttons and canvas and register the listeners.
    */
