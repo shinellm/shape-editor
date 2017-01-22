@@ -15,8 +15,8 @@ public class MoveCmd extends Command {
 	 * set the point where the mouse currently is as dragPoint and set the
 	 * center of the shape to be located at the dragPoint.
 	 * 
-	 * @param p the coordinates of the click
-	 * @param dwg the drawing being clicked
+	 * @param p the coordinates of the press
+	 * @param dwg the drawing being pressed
 	 */
 	public void executePress(Point p, Drawing dwg) {
 		// Find the frontmost shape containing p.

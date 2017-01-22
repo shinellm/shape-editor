@@ -9,7 +9,7 @@ import java.awt.*;
  * @author Shinell J. Manwaring
  * @see Command
  */
-public class FrontCmd {
+public class FrontCmd extends Command {
 	
 	/**
 	 * When the mouse is clicked, find the frontmost Shape in the drawing

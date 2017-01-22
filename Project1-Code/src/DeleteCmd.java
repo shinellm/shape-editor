@@ -7,7 +7,7 @@ import java.awt.*;
  * @author Shinell J. Manwaring
  * @see Command
  */
-public class DeleteCmd {
+public class DeleteCmd extends Command {
 
 	/**
 	 * When the mouse is clicked, find the frontmost Shape in the drawing

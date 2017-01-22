@@ -50,7 +50,7 @@ public class Drawing {
 	 * 
 	 * @param page the page you wish to draw the shape on
 	 */
-	public void Draw(Graphics page) {
+	public void draw(Graphics page) {
 		int listSize = shapes.size() - 1;
 		while (listSize >= 0) {
 				shapes.get(listSize).draw(page);
@@ -78,7 +78,8 @@ public class Drawing {
 	}
 	
 	/**
-	 * Must create a remove, moveToFront, and moveToBack method
+	 * Must create a remove, moveToFront, and moveToBack method.
+	 * Methods to be executed by ColorCmd.java are also needed.
 	 */
 	
 	/**
@@ -117,5 +118,23 @@ public class Drawing {
 		if (index != -1)
 			shapes.remove(index);
 			shapes.add(s); //adds to back of the array list
+	}
+	
+	/**
+	 * Get the current color selected.
+	 * 
+	 * @return the current color
+	 */
+	public Color getColor() {
+		return theColor;
+	}
+	
+	/**
+	 * Selects a new color.
+	 * 
+	 * @param newColor the new color to be used
+	 */
+	public void setColor(Color newColor) {
+		theColor = newColor;
 	}
 }
