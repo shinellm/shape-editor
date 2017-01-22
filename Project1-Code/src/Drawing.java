@@ -40,7 +40,11 @@ public class Drawing {
 	 * @param page the page you wish to draw the shape on
 	 */
 	public void Draw(Graphics page) {
-		
+		int listSize = shapes.size() - 1;
+		while (listSize >= 0) {
+				shapes.get(listSize).draw(page);
+				listSize = listSize - 1;
+		}
 	}
 	
 	/**
@@ -51,7 +55,15 @@ public class Drawing {
 	 * @return the frontmost shape or null
 	 */
 	public Shape getFrontmostContainer(Point p) {
+		int counter = 0;
+		Shape frontMostContainer = null;
 		
+		while (counter < shapes.size()) {
+			if (shapes.get(counter).containsPoint(p))
+				frontMostContainer = shapes.get(counter);
+			else counter += 1;
+		}
+		return frontMostContainer;
 	}
 	
 }
