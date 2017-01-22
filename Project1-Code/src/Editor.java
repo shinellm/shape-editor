@@ -134,7 +134,8 @@ public class Editor extends JApplet {
    */
   private class RectButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent event) {
-      // YOU FILL THIS IN.
+      cmd = new MoveCmd();
+      dwg.add(new Rect(0,0,50,50,initialColor));
       repaint();
     }
   }
@@ -164,7 +165,7 @@ public class Editor extends JApplet {
    */
   private class MoveButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent event) {
-      // YOU FILL THIS IN.
+      cmd = new MoveCmd();
       repaint();
     }
   }
@@ -174,7 +175,7 @@ public class Editor extends JApplet {
    */
   private class DeleteButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent event) {
-      // YOU FILL THIS IN.
+    	// YOU FILL THIS IN.
       repaint();
     }
   }
