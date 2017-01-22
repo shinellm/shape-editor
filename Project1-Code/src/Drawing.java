@@ -35,7 +35,18 @@ public class Drawing {
 	}
 	
 	/**
+	 * Adds a shape to the front of the existing list of shapes.
+	 * Will appear as the frontmost shape in the drawing.
+	 * 
+	 * @param s the shape you want to add
+	 */
+	public void add(Shape s) {
+		shapes.add(0,s);
+	}
+	
+	/**
 	 * Draws all shapes in the existing list of shapes.
+	 * Iterates from the end of the list to the front of the list.
 	 * 
 	 * @param page the page you wish to draw the shape on
 	 */
@@ -66,4 +77,45 @@ public class Drawing {
 		return frontMostContainer;
 	}
 	
+	/**
+	 * Must create a remove, moveToFront, and moveToBack method
+	 */
+	
+	/**
+	 * Removes the given shape from the drawing.
+	 * 
+	 * @param s the shape to be removed
+	 */
+	public void remove(Shape s) {
+		int index = shapes.indexOf(s); // Finds the shape's index
+		
+		if (index != -1)
+			shapes.remove(index);
+	}
+	
+	/**
+	 * Moves the given shape to the front of the drawing.
+	 * 
+	 * @param s the shape to be moved to the front
+	 */
+	public void moveToFront(Shape s) {
+		int index = shapes.indexOf(s); // Finds the shape's index
+		
+		if (index != -1)
+			shapes.remove(index);
+			shapes.add(0,s); //adds to front of the array list
+	}
+	
+	/**
+	 * Moves the given shape to the front of the drawing.
+	 * 
+	 * @param s the shape to be moved to the front
+	 */
+	public void moveToBack(Shape s) {
+		int index = shapes.indexOf(s); // Finds the shape's index
+		
+		if (index != -1)
+			shapes.remove(index);
+			shapes.add(s); //adds to back of the array list
+	}
 }

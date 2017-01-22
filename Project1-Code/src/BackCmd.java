@@ -25,7 +25,7 @@ public class BackCmd {
 
 		if (s != null) { // was there a Shape containing p?
 			// The frontmost shape containing p should be moved to the back of the drawing.
-			dwg.back(s);
+			dwg.moveToBack(s);
 
 		}
 	}
