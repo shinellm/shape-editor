@@ -83,4 +83,40 @@ public class Ellipse extends Shape {
   public Point getCenter() {
     return new Point(left + (width / 2), top + (height / 2));
   }
+  
+	/**
+	 * Sets a new x value for the top-left corner of Ellipse
+	 * 
+	 * @param x new x value
+	 */
+	public void setX(int x) {
+		left = x;
+	}
+
+	/**
+	 * Sets a new y value for the top-left corner of Ellipse
+	 * 
+	 * @param y new y value
+	 */
+	public void setY(int y) {
+		top = y;
+	}
+	
+	/**
+	 * Set the new width of the Ellipse
+	 * 
+	 * @param width the new width
+	 */
+	public void setWidth(int w) {
+		width = w;
+	}
+
+	/**
+	 * Set the new height of the Ellipse
+	 * 
+	 * @param height the new height
+	 */
+	public void setHeight(int h) {
+		height = h;
+	}
 }

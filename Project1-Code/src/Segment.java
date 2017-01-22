@@ -34,7 +34,7 @@ public class Segment extends Shape {
 	 * @param page the page you wish to draw on
 	 */
 	public void drawShape(Graphics page) {
-		page.fillOval(x1, y1, x2, y2);
+		page.drawLine(x1, y1, x2, y2);
 	}
 
 	/**
@@ -105,4 +105,40 @@ public class Segment extends Shape {
   public Point getCenter() {
     return new Point(x1 + ((x2-x1) / 2), y1 + ((y2-y1) / 2));
   }
+  
+	/**
+	 * Sets a new x value for the x coordinate of point 1 on the Segment
+	 * 
+	 * @param x new x value
+	 */
+	public void setX1(int x) {
+		x1 = x;
+	}
+
+	/**
+	 * Sets a new y value for the y coordinate of point 1 on the Segment
+	 * 
+	 * @param y new y value
+	 */
+	public void setY1(int y) {
+		y1 = y;
+	}
+	
+	/**
+	 * Sets a new x value for the x coordinate of point 2 on the Segment
+	 * 
+	 * @param width the new width
+	 */
+	public void setX2(int w) {
+		x2 = w;
+	}
+
+	/**
+	 * Sets a new y value for the y coordinate of point 2 on the Segment
+	 * 
+	 * @param height the new height
+	 */
+	public void setY2(int h) {
+		y2 = h;
+	}
 }

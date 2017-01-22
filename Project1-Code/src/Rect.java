@@ -34,7 +34,7 @@ public class Rect extends Shape {
 	 * @param page the page you wish to draw on
 	 */
 	public void drawShape(Graphics page) {
-		page.drawRect(myX, myY, width, height);
+		page.fillRect(myX, myY, width, height);
 	}
 
 	/**
@@ -82,4 +82,41 @@ public class Rect extends Shape {
 	public Point getCenter() {
 		return new Point(myX + (width / 2), myY + (height / 2));
 	}
+	
+	/**
+	 * Sets a new x value for the upper left corner of Rect
+	 * 
+	 * @param x new x value
+	 */
+	public void setX(int x) {
+		myX = x;
+	}
+
+	/**
+	 * Sets a new y value for the upper left corner of Rect
+	 * 
+	 * @param y new y value
+	 */
+	public void setY(int y) {
+		myY = y;
+	}
+	
+	/**
+	 * Set the new width of the Rect
+	 * 
+	 * @param width the new width
+	 */
+	public void setWidth(int w) {
+		width = w;
+	}
+
+	/**
+	 * Set the new height of the Rect
+	 * 
+	 * @param height the new height
+	 */
+	public void setHeight(int h) {
+		height = h;
+	}
+	
 }
