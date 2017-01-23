@@ -8,7 +8,8 @@ import java.awt.*;
  * @see Command
  */
 public class MoveCmd extends Command {
-
+	private Point dragPoint = null; // Where the mouse was pressed
+	
 	/**
 	 * When the mouse is pressed, find the frontmost Shape in the drawing
 	 * that contains the mouse position. If there is such a Shape, then
@@ -21,13 +22,13 @@ public class MoveCmd extends Command {
 	public void executePress(Point p, Drawing dwg) {
 		// Find the frontmost shape containing p.
 		Shape s = dwg.getFrontmostContainer(p);
-		// Initially sets the dragPoint to null
-		Point dragPoint = null; 
-
+		System.out.println(p);
+		
 		if (s != null) { // was there a Shape containing p?
 			// We have a shape to be moved.
 			dragPoint = p; // Set dragPoint to wherever the mouse is located
 			s.setCenter(dragPoint); // Set the center of the shape to be the location of dragPoint
+			System.out.println(p);
 		}
 	}
 	

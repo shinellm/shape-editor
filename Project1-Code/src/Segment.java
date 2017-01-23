@@ -8,7 +8,6 @@ import java.awt.*;
  * @see Shape
  */
 public class Segment extends Shape {
-  // YOU FILL IN INSTANCE VARIABLES AND METHODS.
 	private int x1, y1, x2, y2; //End points on the segment
 
 	/**

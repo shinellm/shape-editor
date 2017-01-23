@@ -19,9 +19,7 @@ public class AddSegment extends Command {
 	 */
 	public void executePress(Point p, Drawing dwg) { 
 		pressedPoint = p;
-		currentSegment = new Segment(pressedPoint.x, pressedPoint.y, 0, 0, dwg.getColor());
-	
-		System.out.println("point:" + p);
+		currentSegment = new Segment(pressedPoint.x, pressedPoint.y, pressedPoint.x, pressedPoint.y, dwg.getColor());
 	}
 
 	/**
@@ -35,16 +33,12 @@ public class AddSegment extends Command {
 	public void executeDrag(Point p, Drawing dwg) { 
 		if (currentSegment != null) { // makes sure that there is a currentRect
 			Point pt = p;
-			currentSegment.setX1(Math.min(pt.x, pressedPoint.x));
-			currentSegment.setY1(Math.min(pt.y, pressedPoint.y));
-			currentSegment.setX2(Math.abs(pt.x - pressedPoint.x));
-			currentSegment.setY2(Math.abs(pt.y - pressedPoint.y));
+			
+			currentSegment.setX2(Math.abs(pt.x));
+			currentSegment.setY2(Math.abs(pt.y));
 			
 			currentSegment.setColor(dwg.getColor());
 			dwg.add(currentSegment);
-			
-			System.out.println(p);
-			
 		}
 	}
 }
