@@ -54,14 +54,14 @@ public class Drawing {
 	 */
 	public Shape getFrontmostContainer(Point p) {
 		int counter = 0;
-		Shape frontMostContainer = null;
 
 		while (counter < shapes.size()) {
-			if (shapes.get(counter).containsPoint(p))
-				frontMostContainer = shapes.get(counter);
+			if (shapes.get(counter).containsPoint(p)) {
+				return shapes.get(counter);	
+			}
 			counter = counter + 1;
 		}
-		return frontMostContainer;
+		return null;
 	}
 	
 	/**
@@ -83,23 +83,25 @@ public class Drawing {
 	 */
 	public void moveToFront(Shape s) {
 		int index = shapes.indexOf(s); // Finds the shape's index
-		
-		if (index != -1)
+
+		if (index != -1) {
 			shapes.remove(index);
 			shapes.add(0,s); //adds to front of the array list
+		}
 	}
 	
 	/**
-	 * Moves the given shape to the front of the drawing.
+	 * Moves the given shape to the back of the drawing.
 	 * 
-	 * @param s the shape to be moved to the front
+	 * @param s the shape to be moved to the back
 	 */
 	public void moveToBack(Shape s) {
 		int index = shapes.indexOf(s); // Finds the shape's index
-		
-		if (index != -1)
+
+		if (index != -1) {
 			shapes.remove(index);
 			shapes.add(s); //adds to back of the array list
+		}
 	}
 	
 	/**

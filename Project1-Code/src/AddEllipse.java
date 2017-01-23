@@ -20,6 +20,7 @@ public class AddEllipse extends Command {
 	public void executePress(Point p, Drawing dwg) { 
 		pressedPoint = p;
 		currentEllipse = new Ellipse(pressedPoint.x, pressedPoint.y, 0, 0, dwg.getColor());
+		dwg.add(currentEllipse); // adds the ellipse to the current list of shapes
 	}
 
 	/**
@@ -40,7 +41,6 @@ public class AddEllipse extends Command {
 			currentEllipse.setHeight(Math.abs(pt.y - pressedPoint.y)); // updates the value of height in the current ellipse
 			
 			currentEllipse.setColor(dwg.getColor()); // sets the ellipse to the default color
-			dwg.add(currentEllipse); // adds the ellipse to the current list of shapes
 		}
 	}
 }

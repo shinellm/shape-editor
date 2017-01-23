@@ -20,6 +20,7 @@ public class AddSegment extends Command {
 	public void executePress(Point p, Drawing dwg) { 
 		pressedPoint = p;
 		currentSegment = new Segment(pressedPoint.x, pressedPoint.y, pressedPoint.x, pressedPoint.y, dwg.getColor());
+		dwg.add(currentSegment); // adds the segment to the current list of shapes
 	}
 
 	/**
@@ -38,7 +39,6 @@ public class AddSegment extends Command {
 			currentSegment.setY2(pt.y); // updates the value of y2 in the current segment
 			
 			currentSegment.setColor(dwg.getColor()); // sets the segment to the default color
-			dwg.add(currentSegment); // adds the segment to the current list of shapes
 		}
 	}
 }
