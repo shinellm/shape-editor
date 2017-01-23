@@ -20,12 +20,10 @@ public class BackCmd extends Command {
 	 * @param dwg the drawing being clicked
 	 */
 	public void executeClick(Point p, Drawing dwg) {
-		// Find the frontmost shape containing p.
-		Shape s = dwg.getFrontmostContainer(p);
+		Shape s = dwg.getFrontmostContainer(p); // find the frontmost shape containing p
 
 		if (s != null) { // was there a Shape containing p?
-			// The frontmost shape containing p should be moved to the back of the drawing.
-			dwg.moveToBack(s);
+			dwg.moveToBack(s); // move the shape to the back of the drawing
 
 		}
 	}

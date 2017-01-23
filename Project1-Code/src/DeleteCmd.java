@@ -18,15 +18,10 @@ public class DeleteCmd extends Command {
 	 * @param dwg the drawing being pressed
 	 */
 	public void executePress(Point p, Drawing dwg) {
-		// Find the frontmost shape containing p.
-		Shape s = dwg.getFrontmostContainer(p);
-
-		System.out.println(s != null);
+		Shape s = dwg.getFrontmostContainer(p); // Find the frontmost shape containing p.
 		
-		if (s != null) { // was there a Shape containing p?
-			// The frontmost shape containing p should be removed from dwg.
-			dwg.remove(s);
-
+		if (s != null) { // was there a Shape containing p?		
+			dwg.remove(s); // The frontmost shape containing p should be removed from dwg.
 		}
 	}
 }

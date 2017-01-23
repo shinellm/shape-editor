@@ -8,21 +8,8 @@ import java.util.ArrayList;
  * @author Shinell J. Manwaring
  */
 public class Drawing {
-	private ArrayList<Shape> shapes;	// The list of shapes already used
-	private Color theColor;			// The default color selected
-
-	/**
-	 * (1) A constructor, which creates an empty drawing with an 
-	 * initial default Color given as a parameter. The init method of
-	 * the Editor class in Editor.java calls it.
-	 * (2) A method draw that, given a reference to a Graphics object, 
-	 * has each Shape in the drawing draw itself. The paintComponent 
-	 * method of the CanvasPanel class in Editor.java calls it.
-	 * (3) A method getFrontmostContainer that, given a reference to 
-	 * a Point, returns the frontmost Shape in the drawing that contains 
-	 * the Point, or null if no Shape contains the Point. The executeClick 
-	 * method of ExchangeCmd calls it.
-	 */
+	private ArrayList<Shape> shapes; // The list of shapes already used
+	private Color theColor;	// The default color selected
 	
 	/**
 	 * Constructor that creates an empty list of Shapes with a default color.
@@ -78,19 +65,12 @@ public class Drawing {
 	}
 	
 	/**
-	 * Must create a remove, moveToFront, and moveToBack method.
-	 * Methods to be executed by ColorCmd.java are also needed.
-	 */
-	
-	/**
 	 * Removes the given shape from the drawing.
 	 * 
 	 * @param s the shape to be removed
 	 */
 	public void remove(Shape s) {
 		int index = shapes.indexOf(s); // Finds the shape's index
-		
-		System.out.println(index);
 		
 		if (index != -1)
 			shapes.remove(index);
@@ -104,8 +84,6 @@ public class Drawing {
 	public void moveToFront(Shape s) {
 		int index = shapes.indexOf(s); // Finds the shape's index
 		
-		System.out.println(index);
-		
 		if (index != -1)
 			shapes.remove(index);
 			shapes.add(0,s); //adds to front of the array list
@@ -118,8 +96,6 @@ public class Drawing {
 	 */
 	public void moveToBack(Shape s) {
 		int index = shapes.indexOf(s); // Finds the shape's index
-		
-		System.out.println(index);
 		
 		if (index != -1)
 			shapes.remove(index);

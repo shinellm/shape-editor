@@ -110,7 +110,7 @@ public class Segment extends Shape {
 	/**
 	 * Sets a new x value for the x coordinate of point 1 on the Segment
 	 * 
-	 * @param x new x value
+	 * @param x new x1 value
 	 */
 	public void setX1(int x) {
 		x1 = x;
@@ -119,7 +119,7 @@ public class Segment extends Shape {
 	/**
 	 * Sets a new y value for the y coordinate of point 1 on the Segment
 	 * 
-	 * @param y new y value
+	 * @param y new y1 value
 	 */
 	public void setY1(int y) {
 		y1 = y;
@@ -128,7 +128,7 @@ public class Segment extends Shape {
 	/**
 	 * Sets a new x value for the x coordinate of point 2 on the Segment
 	 * 
-	 * @param width the new width
+	 * @param w new x2 value
 	 */
 	public void setX2(int w) {
 		x2 = w;
@@ -137,7 +137,7 @@ public class Segment extends Shape {
 	/**
 	 * Sets a new y value for the y coordinate of point 2 on the Segment
 	 * 
-	 * @param height the new height
+	 * @param h new y2 value
 	 */
 	public void setY2(int h) {
 		y2 = h;

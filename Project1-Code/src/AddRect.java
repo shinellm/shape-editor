@@ -31,15 +31,16 @@ public class AddRect extends Command {
 	 * @param dwg the drawing being dragged
 	 */
 	public void executeDrag(Point p, Drawing dwg) { 
-		if (currentRect != null) { // makes sure that there is a currentRect
-			Point pt = p;
-			currentRect.setX(Math.min(pt.x, pressedPoint.x));
-			currentRect.setY(Math.min(pt.y, pressedPoint.y));
-			currentRect.setWidth(Math.abs(pt.x - pressedPoint.x));
-			currentRect.setHeight(Math.abs(pt.y - pressedPoint.y));
+		if (currentRect != null) { // makes sure that there is a current rect
+			Point pt = p; // where the mouse was dragged
 			
-			currentRect.setColor(dwg.getColor());
-			dwg.add(currentRect);			
+			currentRect.setX(Math.min(pt.x, pressedPoint.x)); // updates the value of x in the current rect
+			currentRect.setY(Math.min(pt.y, pressedPoint.y)); // updates the value of y in the current rect
+			currentRect.setWidth(Math.abs(pt.x - pressedPoint.x)); // updates the value of width in the current rect
+			currentRect.setHeight(Math.abs(pt.y - pressedPoint.y)); // updates the value of height in the current rect
+			
+			currentRect.setColor(dwg.getColor()); // sets the current rect to the default color
+			dwg.add(currentRect);  // adds the current rect to the current list of shapes			
 		}
 	}
 }

@@ -31,15 +31,16 @@ public class AddEllipse extends Command {
 	 * @param dwg the drawing being dragged
 	 */
 	public void executeDrag(Point p, Drawing dwg) { 
-		if (currentEllipse != null) { // makes sure that there is a currentRect
-			Point pt = p;
-			currentEllipse.setX(Math.min(pt.x, pressedPoint.x));
-			currentEllipse.setY(Math.min(pt.y, pressedPoint.y));
-			currentEllipse.setWidth(Math.abs(pt.x - pressedPoint.x));
-			currentEllipse.setHeight(Math.abs(pt.y - pressedPoint.y));
+		if (currentEllipse != null) { // makes sure that there is a current ellipse
+			Point pt = p; // where the mouse was dragged
 			
-			currentEllipse.setColor(dwg.getColor());
-			dwg.add(currentEllipse);
+			currentEllipse.setX(Math.min(pt.x, pressedPoint.x)); // updates the value of x in the current ellipse
+			currentEllipse.setY(Math.min(pt.y, pressedPoint.y)); // updates the value of y in the current ellipse
+			currentEllipse.setWidth(Math.abs(pt.x - pressedPoint.x)); // updates the value of width in the current ellipse
+			currentEllipse.setHeight(Math.abs(pt.y - pressedPoint.y)); // updates the value of height in the current ellipse
+			
+			currentEllipse.setColor(dwg.getColor()); // sets the ellipse to the default color
+			dwg.add(currentEllipse); // adds the ellipse to the current list of shapes
 		}
 	}
 }

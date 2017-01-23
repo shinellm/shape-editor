@@ -20,13 +20,11 @@ public class MoveCmd extends Command {
 	 * @param dwg the drawing being pressed
 	 */
 	public void executePress(Point p, Drawing dwg) {
-		// Find the frontmost shape containing p.
-		Shape s = dwg.getFrontmostContainer(p);
+		dragPoint = p; // set dragPoint to wherever the mouse is located
+		Shape s = dwg.getFrontmostContainer(p); // find the frontmost shape containing p.
 		
 		if (s != null) { // was there a Shape containing p?
-			// We have a shape to be moved.
-			dragPoint = p; // Set dragPoint to wherever the mouse is located
-			s.setCenter(dragPoint); // Set the center of the shape to be the location of dragPoint
+			s.setCenter(dragPoint); // set the center of the shape to be the dragPoint
 		}
 	}
 	
