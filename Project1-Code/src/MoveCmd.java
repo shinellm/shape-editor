@@ -22,13 +22,11 @@ public class MoveCmd extends Command {
 	public void executePress(Point p, Drawing dwg) {
 		// Find the frontmost shape containing p.
 		Shape s = dwg.getFrontmostContainer(p);
-		System.out.println(p);
 		
 		if (s != null) { // was there a Shape containing p?
 			// We have a shape to be moved.
 			dragPoint = p; // Set dragPoint to wherever the mouse is located
 			s.setCenter(dragPoint); // Set the center of the shape to be the location of dragPoint
-			System.out.println(p);
 		}
 	}
 	

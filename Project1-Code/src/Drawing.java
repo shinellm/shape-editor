@@ -68,11 +68,11 @@ public class Drawing {
 	public Shape getFrontmostContainer(Point p) {
 		int counter = 0;
 		Shape frontMostContainer = null;
-		
+
 		while (counter < shapes.size()) {
 			if (shapes.get(counter).containsPoint(p))
 				frontMostContainer = shapes.get(counter);
-			else counter += 1;
+			counter = counter + 1;
 		}
 		return frontMostContainer;
 	}
@@ -90,6 +90,8 @@ public class Drawing {
 	public void remove(Shape s) {
 		int index = shapes.indexOf(s); // Finds the shape's index
 		
+		System.out.println(index);
+		
 		if (index != -1)
 			shapes.remove(index);
 	}
@@ -101,6 +103,8 @@ public class Drawing {
 	 */
 	public void moveToFront(Shape s) {
 		int index = shapes.indexOf(s); // Finds the shape's index
+		
+		System.out.println(index);
 		
 		if (index != -1)
 			shapes.remove(index);
@@ -114,6 +118,8 @@ public class Drawing {
 	 */
 	public void moveToBack(Shape s) {
 		int index = shapes.indexOf(s); // Finds the shape's index
+		
+		System.out.println(index);
 		
 		if (index != -1)
 			shapes.remove(index);

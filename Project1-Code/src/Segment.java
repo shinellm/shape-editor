@@ -93,7 +93,9 @@ public class Segment extends Shape {
    */
   public void move(int deltaX, int deltaY) {
     x1 += deltaX;
+    x2 += deltaX;
     y1 += deltaY;
+    y2 += deltaY;
   }
 
   /**

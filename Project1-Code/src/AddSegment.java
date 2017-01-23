@@ -34,8 +34,8 @@ public class AddSegment extends Command {
 		if (currentSegment != null) { // makes sure that there is a currentRect
 			Point pt = p;
 			
-			currentSegment.setX2(Math.abs(pt.x));
-			currentSegment.setY2(Math.abs(pt.y));
+			currentSegment.setX2(pt.x);
+			currentSegment.setY2(pt.y);
 			
 			currentSegment.setColor(dwg.getColor());
 			dwg.add(currentSegment);
