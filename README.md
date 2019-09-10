@@ -2,6 +2,8 @@
 CSC 260 Project 1 - Use inheritance in two ways to create a simple object-oriented graphical editor applet.
 It runs as an applet so you will need to run it from within Eclipse or IntelliJIDEA.
 
+![](CSC-Project-1.gif)
+
 Project Description:
 
 The graphical editor allows its user to create and edit three kinds of graphical objects in a drawing —rectangles, ellipses, 
