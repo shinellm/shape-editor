@@ -1,5 +1,7 @@
 # shape-editor
 
+![](CSC-Project-1.gif)
+
 A graphical editor applet that lets users create and edit different graphical objects (i.e. rectangles, circles, and line segments). Click and drag to create shapes on the canvas and use the button based GUI do any of the following:
 * Draw shapes of different sizes
 * Move: Reposition shapes by dragging it with your mouse
@@ -7,8 +9,6 @@ A graphical editor applet that lets users create and edit different graphical ob
 * Front/Back: Reorder shapes
 * Exchange: Swap the positions of two shapes
 * Color(Red/Green/Blue): Set the color of the shapes before you draw them.
-
-![](CSC-Project-1.gif)
 
 
 ## Table of Contents  
