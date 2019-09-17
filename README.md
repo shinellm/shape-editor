@@ -21,7 +21,7 @@ A graphical editor applet that lets users create and edit different graphical ob
 
 1.  Clone the repo:
 
-        git clone https://github.com/shinellmanwaring/shape-editor.git
+        git clone https://github.com/shinellm/shape-editor.git
 
 2.  Open the project from your preferred Java editor.
 
